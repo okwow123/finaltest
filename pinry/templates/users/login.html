@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}로그인{% endblock %}
+
+{% block yield %}
+    <div class="container">
+        <div class="row">
+            <div id="form" class="col-sm-4 col-sm-offset-4">
+                <h1>로그인</h1>
+                <h3>OutGuest</h3>
+                <form action="{% url "users:login" %}" method="post" class="form-horizontal">
+                    {% csrf_token %}
+                    {% for field in form %}
+                        {% include "includes/field.html" %}
+                    {% endfor %}
+                    <button type="submit" class="btn btn-primary btn-lg" id="submit">로그인</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

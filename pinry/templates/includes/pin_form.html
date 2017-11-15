@@ -1,0 +1,38 @@
+{% verbatim %}
+    <script id="pin-form-template" type="text/x-handlebars-template">
+        <div class="modal fade" id="pin-form">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title">블랙리스트 추가</h3>
+                    </div>
+                    <div class="modal-body">
+                        <div class="col-sm-6" id="pin-form-image-preview"></div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label" for="pin-form-image-url">에어비앤비 사진 링크</label>
+                                <input type="text" name="pin-form-image-url" id="pin-form-image-url" class="form-control"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="pin-form-image-upload">게스트 사진 업로드</label>
+                                <form action="/pins/create-image/" id="pin-form-image-upload" class="dropzone"></form>
+                            </div>
+                            <div class="form-group">
+                                <label for="pin-form-description">상세정보</label>
+                                <textarea name="pin-form-description" id="pin-form-description" class="form-control"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="pin-form-tags">태그</label>
+                                <input type="text" name="pin-form-tags" id="pin-form-tags" class="form-control"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-default" id="pin-form-close">취소</a>
+                        <button type="submit" class="btn btn-primary" id="pin-form-submit">업로드</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+{% endverbatim %}
