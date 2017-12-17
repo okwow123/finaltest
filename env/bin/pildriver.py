@@ -1,4 +1,4 @@
-#!/home/ilovejsp/project/fuckguest/env/bin/python
+#!/home/okwow123/pinry/env/bin/python2.7
 """PILdriver, an image-processing calculator using PIL.
 
 An instance of class PILDriver is essentially a software stack machine

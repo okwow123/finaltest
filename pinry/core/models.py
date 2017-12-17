@@ -24,6 +24,8 @@ class ImageManager(models.Manager):
         buf.write(response.content)
         obj = InMemoryUploadedFile(buf, 'image', file_name,
                                    None, buf.tell(), None)
+        print "$$$$$$$$$$$$$$$$$$$$$ obj print"
+        print obj
         # create the image and its thumbnails in one transaction, removing
         # a chance of getting Database into a inconsistent state when we
         # try to create thumbnails one by one later

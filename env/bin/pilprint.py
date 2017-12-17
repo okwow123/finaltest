@@ -1,4 +1,4 @@
-#!/home/ilovejsp/project/fuckguest/env/bin/python
+#!/home/okwow123/pinry/env/bin/python2.7
 #
 # The Python Imaging Library.
 # $Id$
