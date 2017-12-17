@@ -60,13 +60,13 @@
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
                         {% if user.is_authenticated %}
-                            <li><a href="{% url 'users:register' %}">사용방법</a></li>
+                            <li><a href="{% url 'users:howtouse' %}">사용방법</a></li>
                             <li><a onclick="pinForm()">블랙리스트 추가</a></li>
                             <li><a onclick="pinForm()">블랙리스트 검색</a></li>
                             <li><a href="{% url 'users:logout' %}">로그아웃</a></li>
                             <!--li>{% include "includes/bookmarklet_link.html" %}</li -->
                         {% else %}
-                            <li><a href="{% url 'users:register' %}">사용방법</a></li>
+                            <li><a href="{% url 'users:howtouse' %}">사용방법</a></li>
                             <li><a onclick="pinForm()">블랙리스트 검색</a></li>
                             <li><a href="{% url 'users:login' %}">로그인</a></li>
                             <li><a href="{% url 'users:register' %}">회원가입</a></li>
