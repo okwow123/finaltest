@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}블랙리스트 검색{% endblock %}
+
+{% block yield %}
+    <div class="container">
+        <div class="row">
+            <div id="form" class="col-sm-4 col-sm-offset-4">
+                <h1>검색</h1>
+                <h2>*현재 사용 불가*</h2>
+                <form action="/pins/tag/" method="get" class="form-horizontal">
+                        {% include "includes/find.html" %}
+                    <button id="submit" type="submit" class="btn btn-lg btn-primary">검색</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

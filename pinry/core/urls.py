@@ -22,10 +22,14 @@ urlpatterns = patterns('',
 
     url(r'^pins/tag/(?P<tag>(\w|-)+)/$', TemplateView.as_view(template_name='core/pins.html'),
         name='tag-pins'),
+    url(r'^pins/tag/search/(?P<tag>(\w|-)+)/$', TemplateView.as_view(template_name='core/pins.html'),
+        name='tag-pins'),
     url(r'^pins/user/(?P<user>(\w|-)+)/$', TemplateView.as_view(template_name='core/pins.html'),
         name='user-pins'),
     url(r'^(?P<pin>[0-9]+)/$', TemplateView.as_view(template_name='core/pins.html'),
         name='recent-pins'),
     url(r'^$', TemplateView.as_view(template_name='core/pins.html'),
         name='recent-pins'),
+    url(r'^[?]+search+[=]', TemplateView.as_view(template_name='include/pins_find.html'),
+        name='recent-pins')
 )
